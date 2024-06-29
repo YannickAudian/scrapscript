@@ -2,7 +2,7 @@ import pandas as pd
 from textblob import TextBlob
 
 # Charger les données depuis le fichier CSV
-df = pd.read_csv("bis_trustpilot_reviews.csv")
+df = pd.read_csv("alibaba_reviews.csv")
 
 # Vérifier les colonnes et afficher les premiers avis pour le débogage
 print("DataFrame columns:", df.columns)
@@ -62,7 +62,7 @@ print("Sentiment distribution:")
 print(sentiment_distribution)
 
 # Sauvegarder le DataFrame nettoyé en CSV
-df.to_csv("new_cleaned_trustpilot_reviews.csv", index=False)
+df.to_csv("new_alibaba_reviews.csv", index=False)
 print("Data saved to bis_cleaned_trustpilot_reviews.csv")
 
 # Afficher le DataFrame en format tableau

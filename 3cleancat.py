@@ -14,7 +14,7 @@ stop_words = set([
 ])
 
 # Charger les données
-file_path = 'new_cleaned_trustpilot_reviews.csv'
+file_path = 'new_alibaba_reviews.csv'
 df = pd.read_csv(file_path)
 
 # Combiner les titres et les commentaires
@@ -83,7 +83,7 @@ def detect_sentiment(text):
 df['sentiment'] = df['text'].apply(detect_sentiment)
 
 # Sauvegarder le DataFrame avec les nouvelles catégories
-output_path = 'lv_categorized_cleaned_trustpilot_reviews.csv'
+output_path = '3alibaba.csv'
 df.to_csv(output_path, index=False)
 
 # Afficher un aperçu des données pour confirmation

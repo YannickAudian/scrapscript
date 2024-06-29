@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Charger le fichier CSV nettoyé
-file_path = 'test_clean_df.csv'
+file_path = '4cleaned_data.csv'
 df = pd.read_csv(file_path)
 
 # Convertir la colonne de date en format datetime

@@ -78,7 +78,7 @@ def get_trustpilot_reviews(base_url, num_pages=100):
     return pd.DataFrame(reviews_list)
 
 # Nouvelle URL de la page Trustpilot
-base_url = "https://fr.trustpilot.com/review/www.amazon.fr"
+base_url = "https://fr.trustpilot.com/review/fr.shopping.rakuten.com"
 
 # Récupérer les avis
 df = get_trustpilot_reviews(base_url, num_pages=160)
@@ -105,7 +105,7 @@ df = df.drop_duplicates(subset=['title', 'body'], keep='first')
 print("Duplicates removed, if any.")
 
 # Sauvegarder le DataFrame en CSV
-df.to_csv("bis_trustpilot_reviews.csv", index=False)
+df.to_csv("1rakuten.csv", index=False)
 print("Data saved to trustpilot_reviews.csv")
 
 # Afficher le DataFrame en format tableau
