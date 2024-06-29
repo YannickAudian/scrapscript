@@ -14,7 +14,7 @@ stop_words = set([
 ])
 
 # Charger les données
-file_path = '2rakuten.csv'
+file_path = '2lbc.csv'
 df = pd.read_csv(file_path)
 
 # Combiner les titres et les commentaires
@@ -83,7 +83,7 @@ def detect_sentiment(text):
 df['sentiment'] = df['text'].apply(detect_sentiment)
 
 # Sauvegarder le DataFrame avec les nouvelles catégories
-output_path = '3rakuten.csv'
+output_path = '3lbc.csv'
 df.to_csv(output_path, index=False)
 
 # Afficher un aperçu des données pour confirmation
