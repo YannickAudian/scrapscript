@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
 }
-BASE_URL = "https://fr.trustpilot.com/review/www.cdiscount.com"
+BASE_URL = "https://fr.trustpilot.com/review/www.rueducommerce.fr"
 NUM_PAGES = 160
 STOP_WORDS = set([
     'le', 'la', 'les', 'un', 'une', 'de', 'des', 'et', 'à', 'en', 'du', 'pour', 
@@ -124,7 +124,7 @@ all_text = ' '.join(df['title'].astype(str) + ' ' + df['body'].astype(str))
 top_keywords = get_top_keywords(all_text, STOP_WORDS)
 
 # Save the DataFrame to CSV
-df.to_csv("cdiscount_cleaned_reviews.csv", index=False)
+df.to_csv("rdc_cleaned_reviews.csv", index=False)
 print("Data saved to cdiscount_cleaned_reviews.csv")
 
 # Step 5: Visualization
